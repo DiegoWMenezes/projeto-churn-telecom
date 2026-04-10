@@ -140,13 +140,4 @@ streamlit run dashboard/app.py
 
 4. **Serviços de internet fiber optic** apresentam o maior churn entre os tipos de conexão.
 
-## Próximos Passos
 
-- Implementar modelo em produção
-- Testar com dados reais da empresa
-- Desenvolver sistema de alertas em tempo real
-- Criar API para predições
-
-## Licença
-
-MIT License
