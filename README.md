@@ -114,6 +114,7 @@ streamlit run dashboard/app.py
 - Desenvolver sistema de alertas em tempo real
 - Criar API para predições
 
-## Licença
+## Autor
 
-MIT License
+Diego Menezes  
+Data Analyst | Python | SQL | Power BI
