@@ -25,60 +25,27 @@ As features mais importantes para predição de churn:
 2. Tempo de relacionamento com a empresa (tenure)
 3. Tipo de contrato
 
-## Análise Exploratória
+## Dashboard
 
-### Distribuição de Churn
+### Overview
 
-![Churn Distribution](./reports/figures/01_churn_distribution_bar.png)
-![Churn Pie](./reports/figures/01_churn_distribution_pie.png)
+![Overview](./reports/img/Overview.png)
 
-### Churn por Tipo de Contrato
+### Análise de Clientes
 
-![Churn by Contract](./reports/figures/02_churn_by_contract.png)
+![Analise de Clientes](./reports/img/Analise%20de%20Clientes.png)
 
-### Churn por Tenure
+### Churn por Segmentos
 
-![Churn by Tenure](./reports/figures/03_churn_by_tenure.png)
+![Churn por Segmentos](./reports/img/churn%20por%20segmentos.png)
 
-### Impacto de Reclamações
+### Modelos de Predição
 
-![Reclamation Impact](./reports/figures/04_reclamation_impact.png)
+![Modelos de Predição](./reports/img/Modelos%20de%20predição.png)
 
-### Churn por Serviço de Internet
+### Score de Risco
 
-![Internet Service](./reports/figures/11_internet_service.png)
-
-### Distribuição de Cobrança Mensal
-
-![Monthly Charges](./reports/figures/10_monthly_charges.png)
-
-## Modelagem
-
-### Comparação de Modelos
-
-![Model Comparison](./reports/figures/06_model_comparison.png)
-
-### Matriz de Confusão (Random Forest)
-
-![Confusion Matrix](./reports/figures/07_confusion_matrix.png)
-
-### Feature Importance
-
-![Feature Importance](./reports/figures/05_feature_importance.png)
-
-### Correlações entre Features
-
-![Correlation Matrix](./reports/figures/12_correlation_matrix.png)
-
-## Segmentação de Risco
-
-### Distribuição do Score de Risco
-
-![Risk Segmentation](./reports/figures/08_risk_segmentation.png)
-
-### Churn Rate por Nível de Risco
-
-![Risk Level](./reports/figures/09_risk_level.png)
+![Score de Risco](./reports/img/Score%20de%20Risco.png)
 
 ## Estrutura do Projeto
 
@@ -94,7 +61,7 @@ projeto_churn_telecom/
 │   ├── models/      # Modelos de ML
 │   └── visualization/  # Gráficos
 ├── reports/
-│   ├── figures/     # Figuras exportadas
+│   ├── img/         # Imagens do dashboard
 │   └── tables/      # Tabelas exportadas
 ├── config/          # Configurações
 └── dashboard/      # Dashboard Streamlit
@@ -104,7 +71,7 @@ projeto_churn_telecom/
 
 ```bash
 # Clonar repositório
-git clone https://github.com/seu-usuario/projeto-churn-telecom.git
+git clone https://github.com/DiegoWMenezes/projeto-churn-telecom.git
 cd projeto-churn-telecom
 
 # Criar ambiente virtual
@@ -140,4 +107,13 @@ streamlit run dashboard/app.py
 
 4. **Serviços de internet fiber optic** apresentam o maior churn entre os tipos de conexão.
 
+## Próximos Passos
 
+- Implementar modelo em produção
+- Testar com dados reais da empresa
+- Desenvolver sistema de alertas em tempo real
+- Criar API para predições
+
+## Licença
+
+MIT License
