@@ -1,0 +1,77 @@
+# Configurações do Projeto Churn Telecom
+
+project:
+  name: "projeto_churn_telecom"
+  version: "1.0.0"
+  description: "Análise de Churn em Empresa de Telecomunicações"
+
+data:
+  raw_path: "data/raw/"
+  processed_path: "data/processed/"
+  filename: "telecom_churn_data.csv"
+
+features:
+  target: "churn"
+  id_column: "customer_id"
+  categorical_columns:
+    - "gender"
+    - "partner"
+    - "dependents"
+    - "phone_service"
+    - "multiple_lines"
+    - "internet_service"
+    - "online_security"
+    - "online_backup"
+    - "device_protection"
+    - "tech_support"
+    - "streaming_tv"
+    - "streaming_movies"
+    - "contract_type"
+    - "payment_method"
+    - "paperless_billing"
+  numerical_columns:
+    - "tenure"
+    - "monthly_charges"
+    - "total_charges"
+    - "num_support_tickets"
+    - "num_reclamations_30d"
+
+preprocessing:
+  handle_missing: "median"
+  scale_numerical: true
+  encode_categorical: true
+
+model:
+  target_column: "churn"
+  test_size: 0.2
+  random_state: 42
+  cv_folds: 5
+
+models:
+  random_forest:
+    n_estimators: 200
+    max_depth: 10
+    min_samples_split: 5
+    class_weight: "balanced"
+
+  xgboost:
+    n_estimators: 200
+    max_depth: 6
+    learning_rate: 0.1
+    scale_pos_weight: 3
+
+  lightgbm:
+    n_estimators: 200
+    max_depth: 8
+    learning_rate: 0.1
+    class_weight: "balanced"
+
+visualization:
+  style: "seaborn-v0_8-darkgrid"
+  palette: "husl"
+  figure_size: [12, 8]
+  dpi: 150
+
+reports:
+  figures_path: "reports/figures/"
+  tables_path: "reports/tables/"

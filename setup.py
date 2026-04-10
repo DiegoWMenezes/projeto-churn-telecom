@@ -1,0 +1,37 @@
+from setuptools import setup, find_packages
+
+setup(
+    name="projeto_churn_telecom",
+    version="1.0.0",
+    description="Análise de Churn em Empresa de Telecomunicações",
+    author="Seu Nome",
+    author_email="seu.email@email.com",
+    packages=find_packages(),
+    install_requires=[
+        "pandas>=2.0.0",
+        "numpy>=1.24.0",
+        "scipy>=1.10.0",
+        "matplotlib>=3.7.0",
+        "seaborn>=0.12.0",
+        "plotly>=5.14.0",
+        "scikit-learn>=1.3.0",
+        "xgboost>=2.0.0",
+        "lightgbm>=4.0.0",
+        "category-encoders>=2.6.0",
+        "imbalanced-learn>=0.11.0",
+        "streamlit>=1.28.0",
+        "dash>=2.14.0",
+        "mlflow>=2.8.0",
+        "pytest>=7.4.0",
+        "python-dotenv>=1.0.0",
+        "pyyaml>=6.0.0",
+    ],
+    python_requires=">=3.10",
+    classifiers=[
+        "Development Status :: 4 - Beta",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python :: 3.10",
+        "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    ],
+)
